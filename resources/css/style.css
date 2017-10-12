@@ -1,0 +1,517 @@
+/* Universal Styles */
+html {
+  font-size: 18px;
+  font-family:"Open Sans", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.mobile, .image-container .mobile {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, span, p {
+  color: #403B2D;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+span, p {
+  opacity: 0.9;
+}
+
+p {
+  font-family: "Manuale", serif;
+  line-height: 1.4;
+}
+
+span {
+  font-size:.85rem;
+}
+
+.author {
+  font-family: "Asap Condensed", sans-serif;
+  line-height: 4rem;
+}
+
+.container {
+  display: flex;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img, .image-container video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.clearfix {
+  clear:both;
+}
+
+@media only screen and (max-width:720px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .desktop, .image-container .desktop, .course-container div:first-child {
+    display: none;
+  }
+
+  .mobile, .image-container .mobile {
+    display: flex;
+  }
+}
+
+/*Header*/
+header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5556rem;
+  padding:0;
+  position: fixed;
+  border-bottom: 1px solid #403B2D;
+  background-color: inherit;
+  min-width: 100%;
+  z-index: 15;
+
+}
+
+#logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:1.3333rem;
+  height:3.5556rem;
+}
+
+#logo img {
+  width: 2.7rem;
+  height:auto;
+}
+
+#logo span {
+  font-size: 1.78rem;
+  font-weight: bold;
+}
+
+#academy {
+  opacity: .5;
+}
+
+header nav ul{
+  display: inline-flex;
+  align-items: flex-end;
+  margin-right: 1.3333rem;
+}
+
+header ul li{
+  margin-left: .8889rem;
+}
+
+nav a:link {
+  color: #403B2D;
+}
+
+nav a:visited {
+  color: #403B2D;
+}
+
+header nav a:hover {
+  color: #1da599;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.15s ease-out 0.1s, font-size 0.15s ease-out 0.1s, font-weight 0.15s ease-out 0.1s;
+}
+
+@media only screen and (max-width:480px) {
+  header {
+    position: static;
+  }
+
+  header nav ul{
+    width: 23rem;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  header nav img:hover {
+    width: 2.3rem;
+    transition: width 0.2s ease-out 0.3s;
+  }
+
+}
+
+/*Banner*/
+.banner {
+  display: inline-flex;
+  margin-top: 3.5556rem;
+  background-color: #CECDCD;
+}
+
+.banner .image-container {
+  width: 60%;
+  padding: 1.7778rem 1.3333rem;
+}
+
+.banner .image-container img {
+  width: 100%;
+}
+
+.banner-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin-right:0;
+  padding:0;
+}
+
+.banner .title {
+  width: 90%;
+  margin: 1.7778rem 1.3333rem;
+}
+
+.banner-title h1, .banner-title h3, .banner-title a {
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  color: white;
+  background-color: #4E4B48;
+  padding: .7rem 7rem;
+  border-radius: .2rem;
+}
+
+.button:hover {
+  background-color: #1da599;
+  font-weight: bold;
+  transition: background-color 0.15s ease-out 0.1s, font-weight 0.15s ease-out 0.1s;
+}
+
+@media only screen and (max-width:1010px) {
+  .button {
+    display: flex;
+    flex:1;
+    padding: .7rem 5rem;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .banner .image-container {
+    width: 90%;
+    margin: 0;
+  }
+
+  .banner-title {
+    padding: 2.286rem 1.143rem; /*32px 16px*/
+    width: 90%;
+    margin: 0;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .banner-title h1 {
+    margin-bottom: 2.286rem; /*32px*/
+  }
+
+  .banner-title h3 {
+    margin-bottom: 1.714rem; /*24px*/
+  }
+
+  .button {
+    font-size: 1.3rem;
+    padding: .7rem 7rem;
+  }
+}
+
+/*Section One -Academy Information; Section Three - partially*/
+section {
+  padding: 0;
+}
+
+section>div{
+  width: 60%;
+  padding: 1.7778rem 1.333rem;
+}
+
+section .image-container {
+  margin-bottom: 1.7778rem;
+}
+
+section p {
+  margin-top: 1.333rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 40%;
+}
+
+aside.main-data {
+  border-left: 0.01rem solid #DBD2D9;
+}
+
+.information{
+  display: inline-flex;
+  padding:.8889rem;
+}
+
+.orientation.information, .fisma-thesis.information {
+  padding-top: 1.7778rem;
+}
+
+aside .image-container {
+  width: 35%;
+  height: auto;
+  margin:0;
+}
+
+aside .image-container img {
+  margin: 0;
+}
+
+aside .data {
+  display: block;
+  text-align: left;
+  width: 65%;
+  margin: 0;
+  padding: 1rem 0.5rem;
+}
+
+aside .data a {
+  line-height: 2;
+}
+
+aside .data h3 {
+  margin-bottom: 1rem;
+}
+
+aside .link {
+  color: #1da599;
+}
+
+aside .link:hover {
+  font-weight: bold;
+  transition: font-weight .15s ease-in .1s;
+}
+
+@media only screen and (max-width:1100px) and (min-width:481px) {
+  aside .image-container {
+    display:none;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  aside {
+    width: 100%;
+  }
+
+  aside.main-data {
+    border-left: none;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+    padding:1.143rem 1.143rem 2.286rem 1.143rem;
+  }
+
+  .lecture.information {
+    padding-top: 2.286rem;
+  }
+
+  aside .image-container {
+    width: 100%;
+  }
+
+  aside .data {
+    width: 100%;
+    margin-top: 2.286rem;
+    margin-left: 2.286rem;
+    margin-right:2.286rem;
+    padding:0 0 0 1.143rem;
+  }
+
+  aside .data h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  aside .data span {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+/*Section Two - Courses*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.778rem;
+  background-color: #F2F4F7;
+  margin-bottom: 1.778rem;
+}
+
+.course-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+ .course-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 1.778rem .889rem;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+.course-container .course {
+  padding: .889rem .889rem 1.333rem .889rem;
+}
+
+.course h3{
+  margin-bottom: .444rem;
+}
+
+.course span:first-of-type {
+  line-height: 2.5;
+}
+
+.course-container:hover {
+ background-color: #CECDCD;
+ transition: background-color 0.15s ease-in 0.1s;
+}
+
+@media only screen and (max-width: 900px) {
+  .course-container {
+   width: 40%;
+ }
+}
+
+@media only screen and (max-width: 480px) {
+  .course-main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width:87%;
+    padding: 2.286rem 1.142rem;
+  }
+
+  .course-container {
+  min-width: 90%;
+   justify-content:center;
+   padding: 1.5rem 2.5rem;
+   margin: 0 0 .571rem 0;
+   background-color: #CECDCD;
+
+ }
+
+ .course-container .course {
+   padding: 0;
+ }
+
+ .course h3{
+   margin:0;
+   font-size: 1.5rem;
+ }
+
+ .course-container:hover {
+  background-color: #1da599;
+ }
+
+}
+
+/*Section Three - Thesis*/
+span.center {
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 480px) {
+  #academythesis .qoute-data {
+    width: 100%;
+  }
+
+  #academythesis .image-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}
+
+/*Footer*/
+footer {
+  justify-content: space-between;
+  padding: .889rem 1.333rem 2rem 1.333rem;
+  border-top: 0.01rem solid #DBD2D9;
+}
+
+footer nav li {
+  display: inline-flex;
+  margin-left: 1.5rem;
+}
+
+footer span, footer nav {
+  font-size: .6rem;
+}
+
+footer nav a:hover {
+  color: #1da599;
+  font-size: .75rem;
+  font-weight: bold;
+  transition: color 0.15s ease-out 0.1s, font-size 0.15s ease-out 0.1s, font-weight 0.15s ease-out 0.1s;
+}
